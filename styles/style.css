@@ -47,22 +47,28 @@ body {
 }
 
 .wrapper {
-    width: 1000px;
+    width: 70%;
     position: absolute;
     top: 50%;
     left: 50%;
+    display: grid;
+    grid-template-columns: 35% auto 35%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    border: 2px dashed pink;
 }
 
 .player-0-panel,
 .player-1-panel {
-    width: 50%;
-    float: left;
-    height: 600px;
+    height: auto;
     padding: 100px;
+    border: 1px solid red;
+}
+
+.middle {
+    background-color: yellow;
 }
 
 
@@ -226,3 +232,30 @@ ol{padding-left: 40px;}
 ol li{font-family: Lato; font-size: 18px; padding-top: 10px;}
 
 p.m-head{font-family: Lato; text-transform: uppercase; font-size: 20px; font-weight: bold;}
+
+@media only screen and (max-width: 1000px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .player-0-panel, .player-1-panel {
+        padding: 5% 5% 15% 5%;
+    }
+
+    .player-score {
+        margin-bottom: 30px;
+    }
+
+    .player-name {
+        font-size: 20px;
+    }
+
+    /* .active .player-name::after {
+        top: -19px;
+    } */
+
+    .player-score {
+        font-size: 50px;
+    }
+
+}
